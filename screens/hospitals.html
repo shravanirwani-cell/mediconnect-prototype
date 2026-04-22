@@ -1,0 +1,97 @@
+ <div class="scr on">
+    <div class="hosp-hdr">
+      <button class="back-w" onclick="go('emergency')">←</button>
+      <div class="em-hdr-text">
+        <div class="em-hdr-title">Cardiac hospitals</div>
+        <div class="em-hdr-sub">2 confirmed · MJPJAY filter · 10km</div>
+      </div>
+    </div>
+    <div class="hosp-filter">
+      <span class="fchip on">All</span>
+      <span class="fchip" onclick="this.classList.toggle('on')">Confirmed only</span>
+      <span class="fchip" onclick="this.classList.toggle('on')">MJPJAY</span>
+      <span class="fchip" onclick="this.classList.toggle('on')">ICU available</span>
+      <span class="fchip" onclick="this.classList.toggle('on')">Nearest first</span>
+    </div>
+    <div style="overflow-y:auto;flex:1;padding-bottom:8px">
+      <div class="ai-rec">
+        <div class="ai-rec-label">Gemini recommendation</div>
+        <div class="ai-rec-text">Go to Govt. Medical College — confirmed ICU capacity, accepts MJPJAY, 2.1 km away.</div>
+      </div>
+      <div class="hosp-list">
+        <div class="hcard confirmed" onclick="go('detail')">
+          <div class="hc-top">
+            <div style="flex:1">
+              <div class="hc-name">Govt. Medical College Hospital</div>
+              <div class="hc-dist">2.1 km · ~5 min ETA · Govt. hospital</div>
+            </div>
+            <span class="conf-badge cb-yes">✓ Confirmed</span>
+          </div>
+          <div class="hc-avail">
+            <span class="av av-ok"><div class="av-dot avd-ok"></div>ICU ready</span>
+            <span class="av av-ok"><div class="av-dot avd-ok"></div>Cardiac unit</span>
+            <span class="av av-na"><div class="av-dot avd-na"></div>No NICU</span>
+          </div>
+          <div class="hc-schemes">
+            <span class="sch">Ayushman Bharat</span>
+            <span class="sch">MJPJAY</span>
+          </div>
+          <div class="hc-foot">
+            <span class="hc-updated">IVR confirmed 12s ago</span>
+            <div class="hc-actions">
+              <button class="hc-btn hcb-detail" onclick="event.stopPropagation();go('detail')">Details</button>
+              <button class="hc-btn hcb-nav" onclick="event.stopPropagation();go('alerted')">Select →</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="hcard confirmed" onclick="go('detail')">
+          <div class="hc-top">
+            <div style="flex:1">
+              <div class="hc-name">City Care Hospital</div>
+              <div class="hc-dist">1.2 km · ~3 min ETA · Private</div>
+            </div>
+            <span class="conf-badge cb-yes">✓ Confirmed</span>
+          </div>
+          <div class="hc-avail">
+            <span class="av av-ok"><div class="av-dot avd-ok"></div>ICU ready</span>
+            <span class="av av-na"><div class="av-dot avd-na"></div>No cath lab</span>
+          </div>
+          <div class="hc-schemes"><span class="sch">MJPJAY</span></div>
+          <div class="hc-foot">
+            <span class="hc-updated">IVR confirmed 8s ago</span>
+            <div class="hc-actions">
+              <button class="hc-btn hcb-detail" onclick="event.stopPropagation();go('detail')">Details</button>
+              <button class="hc-btn hcb-nav" onclick="event.stopPropagation();go('alerted')">Select →</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="hcard noans">
+          <div class="hc-top">
+            <div style="flex:1">
+              <div class="hc-name">MGM Hospital</div>
+              <div class="hc-dist">3.4 km · ~9 min ETA · Private</div>
+            </div>
+            <span class="conf-badge cb-no">No response</span>
+          </div>
+          <div class="hc-avail">
+            <span class="av av-na"><div class="av-dot avd-na"></div>Unconfirmed</span>
+          </div>
+          <div class="hc-schemes"><span class="sch">Ayushman Bharat</span></div>
+          <div class="hc-foot">
+            <span class="hc-updated">Call to verify</span>
+            <div class="hc-actions">
+              <button class="hc-btn hcb-detail">Call</button>
+              <button class="hc-btn hcb-nav" onclick="event.stopPropagation();go('alerted')">Select →</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="disclaimer-strip" style="margin:0">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="flex-shrink:0;margin-top:1px"><circle cx="7" cy="7" r="6" stroke="#D97706" stroke-width="1.2" fill="none"/><path d="M7 4.5v3M7 9.5v.5" stroke="#D97706" stroke-width="1.2" stroke-linecap="round"/></svg>
+          <span>Confirmed = hospital staff pressed 1 on our call. Always call ahead to verify before arriving. Data reflects live IVR response.</span>
+        </div>
+      </div>
+    </div>
+  </div>

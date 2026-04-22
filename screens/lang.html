@@ -1,0 +1,41 @@
+ <div class="scr">
+    <div class="lang-body">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:20px">
+        <button class="back-w" style="background:#F1F5F9;color:var(--text2);border:none;border-radius:50%;width:30px;height:30px;cursor:pointer;font-size:14px" onclick="go('login')">←</button>
+        <div>
+          <div class="lang-title">Select language</div>
+          <div style="font-size:12px;color:var(--text2)">Choose your preferred language</div>
+        </div>
+      </div>
+      <div class="lang-grid">
+        <div class="lang-card sel" id="lc-mr" onclick="selectLang('mr')">
+          <div class="lc-name">Marathi</div>
+          <div class="lc-native">मराठी</div>
+          <div class="lc-check"><svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        </div>
+        <div class="lang-card" id="lc-hi" onclick="selectLang('hi')">
+          <div class="lc-name">Hindi</div>
+          <div class="lc-native">हिंदी</div>
+        </div>
+        <div class="lang-card" id="lc-en" onclick="selectLang('en')">
+          <div class="lc-name">English</div>
+          <div class="lc-native">English</div>
+        </div>
+        <div class="lang-card" id="lc-mix" onclick="selectLang('mix')">
+          <div class="lc-name">Hinglish</div>
+          <div class="lc-native">हिं + Eng</div>
+        </div>
+      </div>
+      <div class="scheme-section">
+        <div class="sec-label">Government scheme (optional)</div>
+        <div class="scheme-chips">
+          <div class="sch-chip" id="sc-ab" onclick="toggleScheme('ab')">Ayushman Bharat</div>
+          <div class="sch-chip sel" id="sc-mj" onclick="toggleScheme('mj')">MJPJAY</div>
+          <div class="sch-chip" id="sc-no" onclick="toggleScheme('no')">No scheme</div>
+        </div>
+      </div>
+      <div style="margin-top:auto;padding-top:20px">
+        <button class="btn-solid" onclick="go('home')">Continue</button>
+      </div>
+    </div>
+  </div>

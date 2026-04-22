@@ -1,0 +1,43 @@
+<div class="scr on">
+    <div class="em-hdr">
+      <div class="em-hdr-text" style="margin-left:6px">
+        <div class="em-hdr-title">Contacting hospitals</div>
+        <div class="em-hdr-sub">Cardiac emergency · MJPJAY · 10km radius</div>
+      </div>
+    </div>
+    <div class="loading-scr" style="justify-content:flex-start;padding-top:20px">
+      <div class="pulse-rings">
+        <div class="pr1"></div><div class="pr2"></div><div class="pr3"></div>
+        <div class="calling-center">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 3h3l1.5 3.75-2.25 1.5c1.1 2.25 3 4.15 5.25 5.25l1.5-2.25L16 13v3a2 2 0 01-2 2C5.2 18 0 12.8 0 5a2 2 0 012-2h1z" fill="white" opacity=".9"/></svg>
+        </div>
+      </div>
+      <div class="loading-title">Calling hospitals simultaneously</div>
+      <div class="loading-sub">All nearby hospitals are being called right now.<br/>Waiting for real-time responses (30 sec)</div>
+      <div class="hospital-calling-list">
+        <div id="hospital-list">
+        <div class="hcl-item">
+          <div class="hcl-dot answered"></div>
+          <div class="hcl-name">Govt. Medical College Hospital</div>
+          <div class="hcl-status ans">Confirmed ✓</div>
+        </div>
+        <div class="hcl-item">
+          <div class="hcl-dot calling"></div>
+          <div class="hcl-name">City Care Hospital</div>
+          <div class="hcl-status call">Calling...</div>
+        </div>
+        <div class="hcl-item">
+          <div class="hcl-dot calling"></div>
+          <div class="hcl-name">MGM Hospital</div>
+          <div class="hcl-status call">Calling...</div>
+        </div>
+        <div class="hcl-item">
+          <div class="hcl-dot waiting"></div>
+          <div class="hcl-name">Kamalnayan Bajaj Hospital</div>
+          <div class="hcl-status">Waiting...</div>
+        </div>
+        </div>  
+      </div>
+      <button class="btn-solid" style="margin-top:10px;width:100%" onclick="go('hospitals')">See results now →</button>
+    </div>
+  </div>

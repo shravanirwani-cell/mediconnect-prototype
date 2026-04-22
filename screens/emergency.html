@@ -1,0 +1,54 @@
+<div class="scr on">
+  <div class="em-hdr">
+    <button class="back-w" onclick="go('home')">←</button>
+      <div class="em-hdr-text">
+        <div class="em-hdr-title">Emergency</div>
+        <div class="em-hdr-sub">Speak or tap your emergency type</div>
+      </div>
+  </div>
+  <div class="em-voice-section">
+    <div class="voice-prompt">Describe the emergency in your language</div>
+      <div class="voice-box">
+        <button class="voice-btn" id="voiceBtn" onclick="toggleVoice()">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 3a4 4 0 00-4 4v4a4 4 0 008 0V7a4 4 0 00-4-4z" fill="white" opacity=".9"/><path d="M5 11a6 6 0 0012 0M11 17v3" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+        </button>
+        <div class="voice-status" id="voiceStatus">Tap microphone to speak</div>
+        <div class="transcript-box" id="transcriptBox" style="display:none">
+          "Mera papa chest mein dard se behosh ho gaye, 58 saal ke hain"
+        </div>
+      </div>
+    </div>
+    <div class="or-divider">or select emergency type</div>
+    <div class="et-body">
+      <div class="et-grid">
+        <div class="et-card sel" style="border-color:#DC2626" id="et-cardiac" onclick="selectET(this,'cardiac');go('loading')">
+          <div class="et-icon" style="background:#FEE2E2">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M4 12l4 4 4-6 3 3 3-3" stroke="#DC2626" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="et-name" style="color:#991B1B">Cardiac</div>
+          <div class="et-req" style="color:#DC2626">ICU · Cath lab</div>
+        </div>
+        <div class="et-card" style="border-color:var(--border)" id="et-accident" onclick="selectET(this,'accident');go('loading')">
+          <div class="et-icon" style="background:#FEF3C7">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 4L3 9v10h5v-6h6v6h5V9L11 4z" fill="#D97706" opacity=".8"/></svg>
+          </div>
+          <div class="et-name" style="color:#92400E">Accident</div>
+          <div class="et-req" style="color:#B45309">Trauma · Surgery</div>
+        </div>
+        <div class="et-card" style="border-color:var(--border)" id="et-nicu" onclick="selectET(this,'nicu');go('loading')">
+          <div class="et-icon" style="background:#EDE9FE">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="9" r="4" fill="#7C3AED" opacity=".7"/><path d="M5 19c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="#7C3AED" stroke-width="1.5" fill="none"/></svg>
+          </div>
+          <div class="et-name" style="color:#5B21B6">Newborn</div>
+          <div class="et-req" style="color:#6D28D9">NICU required</div>
+        </div>
+        <div class="et-card" style="border-color:var(--border)" id="et-other" onclick="selectET(this,'other');go('loading')">
+          <div class="et-icon" style="background:#F1F5F9">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="9" y="4" width="4" height="14" rx="2" fill="#64748B" opacity=".7"/><rect x="4" y="9" width="14" height="4" rx="2" fill="#64748B" opacity=".7"/></svg>
+          </div>
+          <div class="et-name" style="color:#475569">Other</div>
+          <div class="et-req" style="color:#94A3B8">General emergency</div>
+        </div>
+      </div>
+  </div>
+</div>
